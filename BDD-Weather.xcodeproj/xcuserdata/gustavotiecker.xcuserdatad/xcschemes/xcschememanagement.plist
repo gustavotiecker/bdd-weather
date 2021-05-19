@@ -7,7 +7,30 @@
 		<key>BDD-Weather.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>0</integer>
+			<integer>5</integer>
+		</dict>
+		<key>BDD-WeatherTests.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>6</integer>
+		</dict>
+	</dict>
+	<key>SuppressBuildableAutocreation</key>
+	<dict>
+		<key>93815B932655B97A00E9BEF3</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>93815BA42655B97E00E9BEF3</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>93815BAF2655B97E00E9BEF3</key>
+		<dict>
+			<key>primary</key>
+			<true/>
 		</dict>
 	</dict>
 </dict>
