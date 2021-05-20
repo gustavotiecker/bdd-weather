@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		1627B337986C39AEEAEC51C8 /* Pods_BDD_WeatherTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D1B4FDEA9A179420DE00B6A /* Pods_BDD_WeatherTests.framework */; };
+		9379D429265720B5008133CE /* Forecast.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9379D428265720B5008133CE /* Forecast.swift */; };
 		93815B982655B97A00E9BEF3 /* BDD_WeatherApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93815B972655B97A00E9BEF3 /* BDD_WeatherApp.swift */; };
 		93815B9A2655B97A00E9BEF3 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93815B992655B97A00E9BEF3 /* ContentView.swift */; };
 		93815B9C2655B97D00E9BEF3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 93815B9B2655B97D00E9BEF3 /* Assets.xcassets */; };
@@ -45,6 +46,7 @@
 		637883EAD5EBA2DE41A1AE81 /* Pods-BDD-Weather-Tests-BDD-WeatherUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BDD-Weather-Tests-BDD-WeatherUITests.debug.xcconfig"; path = "Target Support Files/Pods-BDD-Weather-Tests-BDD-WeatherUITests/Pods-BDD-Weather-Tests-BDD-WeatherUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		68E21CD9DFF204FA6C0794C1 /* Pods-BDD-Weather.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BDD-Weather.debug.xcconfig"; path = "Target Support Files/Pods-BDD-Weather/Pods-BDD-Weather.debug.xcconfig"; sourceTree = "<group>"; };
 		8FDF62A23E2BC649C4A825DB /* Pods-BDD-WeatherUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BDD-WeatherUITests.debug.xcconfig"; path = "Target Support Files/Pods-BDD-WeatherUITests/Pods-BDD-WeatherUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		9379D428265720B5008133CE /* Forecast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Forecast.swift; sourceTree = "<group>"; };
 		93815B942655B97A00E9BEF3 /* BDD-Weather.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "BDD-Weather.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		93815B972655B97A00E9BEF3 /* BDD_WeatherApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BDD_WeatherApp.swift; sourceTree = "<group>"; };
 		93815B992655B97A00E9BEF3 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -103,6 +105,14 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		9379D427265720A7008133CE /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				9379D428265720B5008133CE /* Forecast.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		93815B8B2655B97A00E9BEF3 = {
 			isa = PBXGroup;
 			children = (
@@ -128,6 +138,7 @@
 		93815B962655B97A00E9BEF3 /* BDD-Weather */ = {
 			isa = PBXGroup;
 			children = (
+				9379D427265720A7008133CE /* Model */,
 				93815B972655B97A00E9BEF3 /* BDD_WeatherApp.swift */,
 				93815B992655B97A00E9BEF3 /* ContentView.swift */,
 				93815B9B2655B97D00E9BEF3 /* Assets.xcassets */,
@@ -420,6 +431,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				93815B9A2655B97A00E9BEF3 /* ContentView.swift in Sources */,
+				9379D429265720B5008133CE /* Forecast.swift in Sources */,
 				93815B982655B97A00E9BEF3 /* BDD_WeatherApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
