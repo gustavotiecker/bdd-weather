@@ -35,8 +35,8 @@ final class ListingForecastOfCities: QuickSpec {
                         // Interactor
                         let interactor = ForecastLoadingInteractor(forecastProvider: provider)
                         
-                        // Since we will be using a state-based architecture, create the initial state
-                        var appState = AppState(status: .loadingForecast)
+                        // Create the initial state
+                        let appState = AppState(status: .loadingForecast)
                         
                         // Ensure app has started to load the forecast for the target cities
                         let interactorPB = interactor.perform(action: .load, in: appState)
@@ -46,13 +46,13 @@ final class ListingForecastOfCities: QuickSpec {
                                 """) {
                                     // Use the sink operator to complete load
                                     _ = interactorPB.sink(receiveCompletion: {
-                                            if case .failure(let error) = $0 {
-                                                fail("Op. should not fail: \(error)")
-                                            }
-                                        }) {
-                                            appState.forecasts = $0
-                                            appState.status = .loadedForecasts
+                                        if case .failure(let error) = $0 {
+                                            fail("Op. should not fail: \(error)")
                                         }
+                                    }) {
+                                        appState.forecasts = $0
+                                        appState.status = .loadedForecasts
+                                    }
                                     
                                     it( """
                                         THEN    there should be two cities loaded, SFO and POA
@@ -80,62 +80,10 @@ final class ListingForecastOfCities: QuickSpec {
     }
 }
 
-struct Forecast: Equatable {
-    var cityName: String
-    var currentForecast: String
-    var currentTemp: Double
-    var minTemp: Double
-    var maxTemp: Double
-}
-
-extension Forecast {
-    static func ==(lhs: Forecast, rhs: Forecast) -> Bool {
-        return lhs.cityName == rhs.cityName
-            && lhs.currentForecast == rhs.currentForecast
-            && Int(lhs.currentTemp*100) == Int(rhs.currentTemp*100)
-            && Int(lhs.minTemp*100) == Int(rhs.minTemp*100)
-            && Int(lhs.maxTemp*100) == Int(rhs.maxTemp*100)
-    }
-}
-
-protocol ForecastProvider {
-    func getForecasts() -> AnyPublisher<[Forecast], Error>
-}
-
 struct MockForecastProvider: ForecastProvider {
     var forecasts: [Forecast]
     
     func getForecasts() -> AnyPublisher<[Forecast], Error> {
             Future<[Forecast], Error> { $0(.success(self.forecasts)) }.eraseToAnyPublisher()
     }
-}
-
-struct ForecastLoadingInteractor {
-    var forecastProvider: ForecastProvider
-    
-    func perform(action: Action, in:AppState) -> AnyPublisher<[Forecast], Error> {
-        forecastProvider
-            .getForecasts()
-            .map{ $0.sorted { $0.cityName < $1.cityName } }
-            .eraseToAnyPublisher()
-    }
-    
-    enum Action {
-        case load
-    }
-    
-    enum Errors: Error {
-        case unknow
-    }
-}
-
-struct AppState {
-    
-    enum Status {
-        case loadingForecast
-        case loadedForecasts
-    }
-    
-    var status: Status
-    var forecasts: [Forecast] = []
 }

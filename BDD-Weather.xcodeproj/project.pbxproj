@@ -9,13 +9,14 @@
 /* Begin PBXBuildFile section */
 		1627B337986C39AEEAEC51C8 /* Pods_BDD_WeatherTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D1B4FDEA9A179420DE00B6A /* Pods_BDD_WeatherTests.framework */; };
 		9379D429265720B5008133CE /* Forecast.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9379D428265720B5008133CE /* Forecast.swift */; };
-		9379D472265735BB008133CE /* OpenWeatherForecastProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9379D471265735BB008133CE /* OpenWeatherForecastProvider.swift */; };
+		9379D49D26574D5E008133CE /* ForecastLoadingInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9379D49C26574D5E008133CE /* ForecastLoadingInteractor.swift */; };
+		9379D4A926574DD2008133CE /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9379D4A826574DD2008133CE /* AppState.swift */; };
 		93815B982655B97A00E9BEF3 /* BDD_WeatherApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93815B972655B97A00E9BEF3 /* BDD_WeatherApp.swift */; };
 		93815B9A2655B97A00E9BEF3 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93815B992655B97A00E9BEF3 /* ContentView.swift */; };
 		93815B9C2655B97D00E9BEF3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 93815B9B2655B97D00E9BEF3 /* Assets.xcassets */; };
 		93815B9F2655B97D00E9BEF3 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 93815B9E2655B97D00E9BEF3 /* Preview Assets.xcassets */; };
 		93815BAA2655B97E00E9BEF3 /* ListingForecastOfCities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93815BA92655B97E00E9BEF3 /* ListingForecastOfCities.swift */; };
-		93815BB52655B97E00E9BEF3 /* BDD_WeatherUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93815BB42655B97E00E9BEF3 /* BDD_WeatherUITests.swift */; };
+		93815BB52655B97E00E9BEF3 /* ListingWeatherOfCities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93815BB42655B97E00E9BEF3 /* ListingWeatherOfCities.swift */; };
 		A758FBE2D83849CDA2AF441B /* Pods_BDD_WeatherUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4178C55829D5B8674BBC891D /* Pods_BDD_WeatherUITests.framework */; };
 		AFE5F79EB0A398B24CEDA389 /* Pods_BDD_Weather.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4793C11A9E32DC7F3A42F5A2 /* Pods_BDD_Weather.framework */; };
 /* End PBXBuildFile section */
@@ -48,7 +49,8 @@
 		68E21CD9DFF204FA6C0794C1 /* Pods-BDD-Weather.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BDD-Weather.debug.xcconfig"; path = "Target Support Files/Pods-BDD-Weather/Pods-BDD-Weather.debug.xcconfig"; sourceTree = "<group>"; };
 		8FDF62A23E2BC649C4A825DB /* Pods-BDD-WeatherUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BDD-WeatherUITests.debug.xcconfig"; path = "Target Support Files/Pods-BDD-WeatherUITests/Pods-BDD-WeatherUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		9379D428265720B5008133CE /* Forecast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Forecast.swift; sourceTree = "<group>"; };
-		9379D471265735BB008133CE /* OpenWeatherForecastProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenWeatherForecastProvider.swift; sourceTree = "<group>"; };
+		9379D49C26574D5E008133CE /* ForecastLoadingInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastLoadingInteractor.swift; sourceTree = "<group>"; };
+		9379D4A826574DD2008133CE /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
 		93815B942655B97A00E9BEF3 /* BDD-Weather.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "BDD-Weather.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		93815B972655B97A00E9BEF3 /* BDD_WeatherApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BDD_WeatherApp.swift; sourceTree = "<group>"; };
 		93815B992655B97A00E9BEF3 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -59,7 +61,7 @@
 		93815BA92655B97E00E9BEF3 /* ListingForecastOfCities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListingForecastOfCities.swift; sourceTree = "<group>"; };
 		93815BAB2655B97E00E9BEF3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		93815BB02655B97E00E9BEF3 /* BDD-WeatherUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "BDD-WeatherUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		93815BB42655B97E00E9BEF3 /* BDD_WeatherUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BDD_WeatherUITests.swift; sourceTree = "<group>"; };
+		93815BB42655B97E00E9BEF3 /* ListingWeatherOfCities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListingWeatherOfCities.swift; sourceTree = "<group>"; };
 		93815BB62655B97E00E9BEF3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9D1B4FDEA9A179420DE00B6A /* Pods_BDD_WeatherTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BDD_WeatherTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A283EF7331350119B46AD0F7 /* Pods-BDD-Weather-Tests-BDD-WeatherTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BDD-Weather-Tests-BDD-WeatherTests.release.xcconfig"; path = "Target Support Files/Pods-BDD-Weather-Tests-BDD-WeatherTests/Pods-BDD-Weather-Tests-BDD-WeatherTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -115,6 +117,30 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		9379D48B26574BD5008133CE /* View */ = {
+			isa = PBXGroup;
+			children = (
+				93815B992655B97A00E9BEF3 /* ContentView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		9379D49B26574D43008133CE /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				9379D49C26574D5E008133CE /* ForecastLoadingInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		9379D4A726574DC8008133CE /* State */ = {
+			isa = PBXGroup;
+			children = (
+				9379D4A826574DD2008133CE /* AppState.swift */,
+			);
+			path = State;
+			sourceTree = "<group>";
+		};
 		93815B8B2655B97A00E9BEF3 = {
 			isa = PBXGroup;
 			children = (
@@ -141,8 +167,10 @@
 			isa = PBXGroup;
 			children = (
 				9379D427265720A7008133CE /* Model */,
+				9379D4A726574DC8008133CE /* State */,
+				9379D49B26574D43008133CE /* Interactor */,
+				9379D48B26574BD5008133CE /* View */,
 				93815B972655B97A00E9BEF3 /* BDD_WeatherApp.swift */,
-				93815B992655B97A00E9BEF3 /* ContentView.swift */,
 				93815B9B2655B97D00E9BEF3 /* Assets.xcassets */,
 				93815BA02655B97D00E9BEF3 /* Info.plist */,
 				93815B9D2655B97D00E9BEF3 /* Preview Content */,
@@ -162,7 +190,6 @@
 			isa = PBXGroup;
 			children = (
 				93815BA92655B97E00E9BEF3 /* ListingForecastOfCities.swift */,
-				9379D471265735BB008133CE /* OpenWeatherForecastProvider.swift */,
 				93815BAB2655B97E00E9BEF3 /* Info.plist */,
 			);
 			path = "BDD-WeatherTests";
@@ -171,7 +198,7 @@
 		93815BB32655B97E00E9BEF3 /* BDD-WeatherUITests */ = {
 			isa = PBXGroup;
 			children = (
-				93815BB42655B97E00E9BEF3 /* BDD_WeatherUITests.swift */,
+				93815BB42655B97E00E9BEF3 /* ListingWeatherOfCities.swift */,
 				93815BB62655B97E00E9BEF3 /* Info.plist */,
 			);
 			path = "BDD-WeatherUITests";
@@ -435,6 +462,8 @@
 			files = (
 				93815B9A2655B97A00E9BEF3 /* ContentView.swift in Sources */,
 				9379D429265720B5008133CE /* Forecast.swift in Sources */,
+				9379D4A926574DD2008133CE /* AppState.swift in Sources */,
+				9379D49D26574D5E008133CE /* ForecastLoadingInteractor.swift in Sources */,
 				93815B982655B97A00E9BEF3 /* BDD_WeatherApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -443,7 +472,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9379D472265735BB008133CE /* OpenWeatherForecastProvider.swift in Sources */,
 				93815BAA2655B97E00E9BEF3 /* ListingForecastOfCities.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -452,7 +480,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				93815BB52655B97E00E9BEF3 /* BDD_WeatherUITests.swift in Sources */,
+				93815BB52655B97E00E9BEF3 /* ListingWeatherOfCities.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
