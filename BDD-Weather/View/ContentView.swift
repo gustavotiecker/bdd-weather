@@ -9,6 +9,7 @@ import SwiftUI
 import Combine
 
 struct ContentView: View {
+    
     private let forecasts: [Forecast] = [
         Forecast(cityName: "San Francisco", currentForecast: "Sunny", currentTemp: 20.0, minTemp: 15.0, maxTemp: 25.0),
         Forecast(cityName: "Porto Alegre", currentForecast: "Cloudy", currentTemp: 15.0, minTemp: 10.0, maxTemp: 20.0)

@@ -13,6 +13,7 @@ final class AppState {
         case loadingForecast
         case loadedForecasts
     }
+    
     var status: Status
     var forecasts: [Forecast]
     

@@ -44,7 +44,7 @@ final class ListingForecastOfCities: QuickSpec {
                         context("""
                                 WHEN    loading finishes successfully
                                 """) {
-                                    // Use the sink operator to complete load
+                            
                                     _ = interactorPB.sink(receiveCompletion: {
                                         if case .failure(let error) = $0 {
                                             fail("Op. should not fail: \(error)")
